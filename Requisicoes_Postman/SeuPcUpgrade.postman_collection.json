@@ -1,0 +1,100 @@
+{
+	"info": {
+		"_postman_id": "a889c5e7-aacb-47ed-8731-8e4d13f1b136",
+		"name": "SeuPcUpgrade",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Retorna todos os produtos Cadastrados",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/produtos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"produtos"
+					]
+				},
+				"description": "Retorna todos os produtos Cadastrados na Base de Dados"
+			},
+			"response": []
+		},
+		{
+			"name": "Retorna um produto atraves do seu ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/produtos/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"produtos",
+						"2"
+					]
+				},
+				"description": "Retorna um produto cadastrado na base de dados através da sua chave primária ID."
+			},
+			"response": []
+		},
+		{
+			"name": "Deleta um produto com um ID específico",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/produtos/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"produtos",
+						"2"
+					]
+				},
+				"description": "Deleta um produto pelo seu ID"
+			},
+			"response": []
+		},
+		{
+			"name": "Cria um novo produto",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\r\n        \"id\": 122,\r\n        \"prd_titulo\": \"Memória HyperX\",\r\n        \"prd_fabricante\": \"HyperX\",\r\n        \"prd_preco\": 358.0,\r\n        \"prd_precoaqusicao\": 123.0,\r\n        \"prd_qtestoque\": 30,\r\n        \"prd_descricao\": \"HyperX 8GB de RAM DDR4 Gaming - Velocidades até 4133MHz\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/produtos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"produtos"
+					]
+				},
+				"description": "Cria um novo produto passando um formato JSON"
+			},
+			"response": []
+		}
+	]
+}
